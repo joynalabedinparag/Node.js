@@ -1,0 +1,47 @@
+extends ../layout
+block portfolio
+    section.bg-light#portfolio
+        .container
+            .row
+                div.col-lg-12.text-center
+                    h2.section-heading.text-uppercase Portfolio
+                    h3.section-subheading.text-mutedLorem ipsum dolor sit amet consectetur.
+            .row
+                each project, i in projectlist
+
+                    .col-md-4.col-sm-6.portfolio-item
+                        a.portfolio-link(href="#portfolioModal#{i}" data-toggle="modal")
+                            .portfolio-hover
+                                .portfolio-hover-content
+                                    i.fa.fa-plus.fa-3x 
+                            img.img-fluid(src="uploads/project-thumb/#{project.name}.jpg" alt="Image Title")
+                        .portfolio-caption
+                            h4 #{project.name}
+                            if(project.screenshots_url) 
+                                a.text-muted(href="#{project.screenshots_url}" target="_blank") Screenshots
+                            
+    each project, i in projectlist
+        //-  Modal 1
+        div.portfolio-modal.modal.fade(id="portfolioModal#{i}" tabindex="-1" role="dialog" aria-hidden="true")
+            .modal-dialog
+                .modal-content
+                    .close-modal(data-dismiss="modal")
+                        .lr
+                            .rl
+                    .container
+                        .row
+                            .col-lg-8.mx-auto
+                                .modal-body
+                                    //- Project Details Go Here
+                                    h2.text-uppercase #{project.name}
+                                    p.item-intro.text-muted Lorem ipsum dolor sit amet consectetur
+                                    img.img-fluid.d-block.mx-auto(src="uploads/project-thumb/#{project.name}.jpg" alt="")
+                                    p #{project.project_description}
+                                    ul.list-inline
+                                        li Client: #{project.client}
+                                        li Technology Used: #{project.technologies}
+                                        li Development Time: #{project.deveopment_time}
+                                        
+                                    
+                                    button.btn.btn-primary(data-dismiss="modal" type="button")
+                                        i.fa.fa-times Close Project

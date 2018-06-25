@@ -1,0 +1,51 @@
+extends ../layout_admin
+
+block content
+  h3= title
+  form(name="addproject", method="post", action="/project-create", encType="multipart/form-data")
+    span Name
+    span &nbsp;
+    input#input_name(type="text", placeholder="Project Name", name="name")
+    br
+    br
+    span Client
+    span &nbsp;
+    input#input_street(type="text", placeholder="Client", name="client")
+    br
+    br
+    span Technology used
+    span &nbsp;
+    input#input_city(type="text", placeholder="Used Technologies", name="technologies")
+    br
+    br
+    span No of Resources
+    span &nbsp;
+    input#input_state(type="text", placeholder="No of Resources", name="no_of_resource")
+    br
+    br
+    span Development Time
+    span &nbsp;
+    input#input_sex(type="text", placeholder="Time", name="deveopment_time")
+    br
+    br
+    span Project Thumb
+    span &nbsp;
+    input#input_state(type="file", placeholder="", name="thumb")
+    br
+    br
+    span Project Description
+    span &nbsp;
+    textarea#input_state(type="textarea", placeholder="", name="project_description")
+    br
+    br
+    span Project Demo Url
+    span &nbsp;
+    input#input_state(type="textarea", placeholder="", name="demo_url")
+    br
+    br
+    span Project Screenshots Url
+    span &nbsp;
+    input#input_state(type="textarea", placeholder="", name="screenshots_url")
+    br
+    br
+    button#submit_student(type="submit") submit

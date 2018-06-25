@@ -1,0 +1,89 @@
+doctype html
+html
+  head
+    meta(http-equiv = "Content-Type", :content = "text/html")
+    title Md Joynal Abedin Parag
+
+    //-  Bootstrap core CSS 
+    link(href='/agency-template/vendor/bootstrap/css/bootstrap.min.css', rel='stylesheet')/
+
+    //- Custom fonts for this template
+    link(href='/agency-template/vendor/font-awesome/css/font-awesome.min.css', rel='stylesheet')
+    link(href='https://fonts.googleapis.com/css?family=Montserrat:400,700', rel='stylesheet')
+    link(href='https://fonts.googleapis.com/css?family=Kaushan+Script', rel='stylesheet')
+    link(href='https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic', rel='stylesheet')
+    link(href='https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700', rel='stylesheet')
+    
+    //- Custom styles for this template
+    link(href='/agency-template/css/agency.min.css', rel='stylesheet')
+  
+  body#page-top
+    //-  Navigation
+    nav#mainNav.navbar.navbar-expand-lg.navbar-dark.fixed-top
+      .container
+        a.navbar-brand.js-scroll-trigger(href="#page-top") Md. Joynal Abedin Parag
+        button.navbar-toggler.navbar-toggler-right(type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation") 
+          Menu 
+          i.fa.fa-bars
+        
+        div.collapse.navbar-collapse#navbarResponsive
+          ul.navbar-nav.text-uppercase.ml-auto
+            li.nav-item
+              a.nav-link.js-scroll-trigger(href="#services") About Me
+            li.nav-item
+              a.nav-link.js-scroll-trigger(href="#portfolio") Portfolio
+            li.nav-item
+              a.nav-link.js-scroll-trigger(href="#about") About
+            li.nav-item
+              a.nav-link.js-scroll-trigger(href="#team") Team
+            li.nav-item
+              a.nav-link.js-scroll-trigger(href="#contact") Contact
+         
+    //- Header
+    header.masthead
+      .container
+        .intro-text
+             .row
+              .col-md-6
+                .content
+                  // content
+                  block content
+ 
+
+
+      
+      //- Footer
+      footer
+        .container
+          .row
+            .col-md-4
+              span.copyright Copyright &copy; Md. Joynal Abedin Parag 2019;
+            .col-md-4
+              ul.list-inline.social-buttons
+                li.list-inline-item
+                  a(href="#") 
+                    i.fa.fa-twitter
+                li.list-inline-item
+                  a(href="#") 
+                    i.fa.fa-facebook
+                li.list-inline-item
+                  a(href="#") 
+                    i.fa.fa-linkedin        
+            .col-md-4
+              ul.list-inline.quicklinks
+                li.list-inline-item
+                  a(href="#") Privacy Policy
+                li.list-inline-item
+                  a(href="#") Term of Use
+              </ul>
+
+    //- Bootstrap core JavaScript
+    script(src='/agency-template/vendor/jquery/jquery.min.js')
+    script(src='/agency-template/vendor/bootstrap/js/bootstrap.bundle.min.js')
+    //- Plugin JavaScript 
+    script(src='/agency-template/vendor/jquery-easing/jquery.easing.min.js')
+    //- Contact form JavaScript 
+    script(src='/agency-template/js/jqBootstrapValidation.js')
+    script(src='/agency-template/js/contact_me.js')
+    //- Custom scripts for this template    
+    script(src='/agency-template/js/agency.min.js')
