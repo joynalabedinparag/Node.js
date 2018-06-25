@@ -1,0 +1,26 @@
+<%- include ../layouts/header.ejs %>
+
+        <div class="page-data">
+            <% if (failed == true) { %> /* @TODO : Remove */
+                <p> Invalid Credentials </p>
+            <% } %>
+            <form method="post" action="/loginCheck">
+                <table cellpadding="11">
+                <tr>
+                    <td class="label">Email</td><td>: <input type="text" name="email"></td>
+                 </tr>
+                  <tr>
+                    <td class="label">Password</td><td>: <input type="text" name="password"></td>
+                 </tr>
+                 <tr>
+                    <td class="label"></td>
+                    <td>
+                        &nbsp; <input type="submit" name="submit" value="Login" class="btn btn-success">
+                    </td>
+                 </tr>
+                </table>
+            </form>
+
+        </div>
+
+<%- include ../layouts/footer.ejs %>
